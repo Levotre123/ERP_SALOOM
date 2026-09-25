@@ -1,0 +1,167 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_operations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_sales
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_pos
+msgid "POS"
+msgstr "Caisse"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_pos_orders
+msgid "Sales History"
+msgstr "Historique des ventes"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_pos_sessions
+msgid "Cash"
+msgstr "Caisse"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_products
+msgid "Products"
+msgstr "Articles"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_stock
+msgid "Stock"
+msgstr "Stock"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_stock_quants
+msgid "Current Stock"
+msgstr "Stock actuel"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_stock_moves
+msgid "Movements"
+msgstr "Mouvements"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_stock_inventory
+msgid "Inventory"
+msgstr "Inventaire"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_purchase
+msgid "Purchases"
+msgstr "Achats"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_suppliers
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_customers
+msgid "Customers"
+msgstr "Clients"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_employees
+msgid "Employees"
+msgstr "Employés"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_expenses
+#: model:ir.actions.act_window,name:multi_activity_operations.action_expense
+msgid "Expenses"
+msgstr "Dépenses"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_expense_categories
+#: model:ir.actions.act_window,name:multi_activity_operations.action_expense_category
+msgid "Expense Categories"
+msgstr "Catégories de dépenses"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_alerts
+#: model:ir.actions.act_window,name:multi_activity_operations.action_alert
+msgid "Alerts"
+msgstr "Alertes"
+
+#. module: multi_activity_operations
+#: model:ir.ui.menu,name:multi_activity_operations.menu_audit
+#: model:ir.actions.act_window,name:multi_activity_operations.action_audit
+msgid "Audit"
+msgstr "Audit"
+
+#. module: multi_activity_operations
+#: model:ir.model.fields,field_description:multi_activity_operations.field_pos_config__ma_cash_tolerance
+msgid "Cash difference tolerance"
+msgstr "Tolérance d’écart de caisse"
+
+#. module: multi_activity_operations
+#: model:ir.model.fields,field_description:multi_activity_operations.field_product_template__ma_duration
+msgid "Service Duration (hours)"
+msgstr "Durée du service (heures)"
+
+#. module: multi_activity_operations
+#: model:ir.model.fields,field_description:multi_activity_operations.field_product_template__ma_commission_percent
+msgid "Default Commission %"
+msgstr "Commission par défaut (%)"
+
+#. module: multi_activity_operations
+#: model:ir.model.fields,field_description:multi_activity_operations.field_product_template__ma_min_qty
+msgid "Low Stock Threshold"
+msgstr "Seuil de stock bas"
+
+#. module: multi_activity_operations
+#: model:multi.activity.expense.category,name:multi_activity_operations.expense_cat_rent
+msgid "Rent"
+msgstr "Loyer"
+
+#. module: multi_activity_operations
+#: model:multi.activity.expense.category,name:multi_activity_operations.expense_cat_utilities
+msgid "Utilities"
+msgstr "Charges"
+
+#. module: multi_activity_operations
+#: model:multi.activity.expense.category,name:multi_activity_operations.expense_cat_supplies
+msgid "Supplies"
+msgstr "Fournitures"
+
+#. module: multi_activity_operations
+#: model:multi.activity.expense.category,name:multi_activity_operations.expense_cat_payroll
+msgid "Staff"
+msgstr "Personnel"
+
+#. module: multi_activity_operations
+#: model:multi.activity.expense.category,name:multi_activity_operations.expense_cat_other
+msgid "Other"
+msgstr "Autre"
+
+#. module: multi_activity_operations
+#: model_terms:ir.ui.view,arch_db:multi_activity_operations.view_expense_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: multi_activity_operations
+msgid "Only draft expenses can be confirmed."
+msgstr "Seules les dépenses en brouillon peuvent être confirmées."
+
+#. module: multi_activity_operations
+msgid "Expenses cannot be deleted. Cancel them to keep the financial history."
+msgstr "Les dépenses ne peuvent pas être supprimées. Annulez-les pour conserver l’historique."
+
+#. module: multi_activity_operations
+msgid "You are not allowed to cancel this sale."
+msgstr "Vous n’êtes pas autorisé à annuler cette vente."
+
+#. module: multi_activity_operations
+msgid "Paid sales cannot be deleted. Cancel or refund them to keep the history."
+msgstr "Les ventes payées ne peuvent pas être supprimées. Annulez-les ou remboursez-les."

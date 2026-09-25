@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="type_salon" model="multi.activity.business.type">
+        <field name="name">Hair Salon</field>
+        <field name="code">salon</field>
+        <field name="sequence">10</field>
+        <field name="industry_module">multi_activity_salon</field>
+    </record>
+    <record id="type_barber" model="multi.activity.business.type">
+        <field name="name">Barber Shop</field>
+        <field name="code">barber</field>
+        <field name="sequence">20</field>
+        <field name="industry_module">multi_activity_salon</field>
+    </record>
+    <record id="type_restaurant" model="multi.activity.business.type">
+        <field name="name">Restaurant</field>
+        <field name="code">restaurant</field>
+        <field name="sequence">30</field>
+        <field name="industry_module">multi_activity_restaurant</field>
+    </record>
+    <record id="type_bar" model="multi.activity.business.type">
+        <field name="name">Bar</field>
+        <field name="code">bar</field>
+        <field name="sequence">40</field>
+        <field name="industry_module">multi_activity_bar</field>
+    </record>
+    <record id="type_cafe" model="multi.activity.business.type">
+        <field name="name">Café</field>
+        <field name="code">cafe</field>
+        <field name="sequence">50</field>
+    </record>
+    <record id="type_snack" model="multi.activity.business.type">
+        <field name="name">Snack</field>
+        <field name="code">snack</field>
+        <field name="sequence">60</field>
+    </record>
+    <record id="type_other" model="multi.activity.business.type">
+        <field name="name">Other</field>
+        <field name="code">other</field>
+        <field name="sequence">90</field>
+    </record>
+</odoo>

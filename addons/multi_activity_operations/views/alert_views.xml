@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_alert_list" model="ir.ui.view">
+        <field name="name">multi.activity.alert.list</field>
+        <field name="model">multi.activity.alert</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="alert_type"/>
+                <field name="establishment_id"/>
+                <field name="product_id"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_alert_form" model="ir.ui.view">
+        <field name="name">multi.activity.alert.form</field>
+        <field name="model">multi.activity.alert</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_done" type="object" string="Mark Done" invisible="state == 'done'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="alert_type"/>
+                        <field name="establishment_id"/>
+                        <field name="product_id"/>
+                        <field name="session_id"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_alert" model="ir.actions.act_window">
+        <field name="name">Alerts</field>
+        <field name="res_model">multi.activity.alert</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state', '=', 'open')]</field>
+    </record>
+</odoo>

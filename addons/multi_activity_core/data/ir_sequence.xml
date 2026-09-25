@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_establishment" model="ir.sequence">
+        <field name="name">Establishment</field>
+        <field name="code">multi.activity.establishment</field>
+        <field name="prefix">EST</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

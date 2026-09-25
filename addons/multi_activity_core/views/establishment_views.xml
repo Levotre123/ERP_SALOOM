@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_establishment_list" model="ir.ui.view">
+        <field name="name">multi.activity.establishment.list</field>
+        <field name="model">multi.activity.establishment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="business_type_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="city"/>
+                <field name="manager_id"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_establishment_form" model="ir.ui.view">
+        <field name="name">multi.activity.establishment.form</field>
+        <field name="model">multi.activity.establishment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="business_type_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="manager_id"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="tz"/>
+                            <field name="warehouse_id"/>
+                            <field name="pos_config_id"/>
+                        </group>
+                    </group>
+                    <group string="Address">
+                        <field name="street"/>
+                        <field name="street2"/>
+                        <field name="city"/>
+                        <field name="zip"/>
+                        <field name="country_id"/>
+                    </group>
+                    <group string="Users">
+                        <field name="user_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_establishment" model="ir.actions.act_window">
+        <field name="name">Establishments</field>
+        <field name="res_model">multi.activity.establishment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

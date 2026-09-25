@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_dashboard"
+        name="Dashboard"
+        parent="multi_activity_core.menu_ma_root"
+        action="action_dashboard"
+        sequence="1"
+    />
+</odoo>

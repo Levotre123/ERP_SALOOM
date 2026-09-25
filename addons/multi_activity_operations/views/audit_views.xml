@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_audit_list" model="ir.ui.view">
+        <field name="name">multi.activity.audit.log.list</field>
+        <field name="model">multi.activity.audit.log</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false">
+                <field name="name"/>
+                <field name="timestamp"/>
+                <field name="user_id"/>
+                <field name="action"/>
+                <field name="model"/>
+                <field name="establishment_id"/>
+                <field name="old_value"/>
+                <field name="new_value"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_audit_form" model="ir.ui.view">
+        <field name="name">multi.activity.audit.log.form</field>
+        <field name="model">multi.activity.audit.log</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="timestamp"/>
+                            <field name="user_id"/>
+                            <field name="action"/>
+                            <field name="source"/>
+                        </group>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="tenant_id"/>
+                            <field name="establishment_id"/>
+                            <field name="model"/>
+                            <field name="res_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="old_value"/>
+                        <field name="new_value"/>
+                        <field name="reason"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_audit_search" model="ir.ui.view">
+        <field name="name">multi.activity.audit.log.search</field>
+        <field name="model">multi.activity.audit.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="action"/>
+                <field name="user_id"/>
+                <field name="model"/>
+                <filter name="filter_price" string="Price changes" domain="[('action', '=', 'price_change')]"/>
+                <filter name="filter_cash" string="Cash" domain="[('action', '=', 'cash_close')]"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_audit" model="ir.actions.act_window">
+        <field name="name">Audit</field>
+        <field name="res_model">multi.activity.audit.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

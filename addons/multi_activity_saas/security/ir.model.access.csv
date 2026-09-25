@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ma_feature_system,multi.activity.feature.system,model_multi_activity_feature,base.group_system,1,1,1,1
+access_ma_feature_user,multi.activity.feature.user,model_multi_activity_feature,base.group_user,1,0,0,0
+access_ma_plan_system,multi.activity.plan.system,model_multi_activity_plan,base.group_system,1,1,1,1
+access_ma_plan_user,multi.activity.plan.user,model_multi_activity_plan,base.group_user,1,0,0,0
+access_ma_tenant_system,multi.activity.tenant.system,model_multi_activity_tenant,base.group_system,1,1,1,1
+access_ma_tenant_user,multi.activity.tenant.user,model_multi_activity_tenant,base.group_user,1,0,0,0
+access_ma_subscription_system,multi.activity.subscription.system,model_multi_activity_subscription,base.group_system,1,1,1,1
+access_ma_subscription_user,multi.activity.subscription.user,model_multi_activity_subscription,base.group_user,1,0,0,0
+access_ma_ticket_user,multi.activity.ticket.user,model_multi_activity_ticket,base.group_user,1,1,1,0
+access_ma_ticket_system,multi.activity.ticket.system,model_multi_activity_ticket,base.group_system,1,1,1,1
+access_ma_prov_log_system,multi.activity.provisioning.log.system,model_multi_activity_provisioning_log,base.group_system,1,1,1,1
+access_ma_prov_log_user,multi.activity.provisioning.log.user,model_multi_activity_provisioning_log,base.group_user,1,0,0,0

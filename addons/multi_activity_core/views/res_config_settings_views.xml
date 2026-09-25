@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_ma" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.multi.activity</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Business" string="Business" name="multi_activity_core">
+                    <block title="Establishments" name="ma_establishment_settings">
+                        <setting string="Sites" help="POS, stock and staff stay scoped to the current establishment.">
+                            <button type="action" name="%(action_establishment)d" string="Manage establishments" class="btn-primary"/>
+                        </setting>
+                    </block>
+                    <block title="Languages" name="ma_languages_settings">
+                        <setting string="Extra interface languages" help="English stays available. Add codes such as fr_FR, es_ES, pt_PT.">
+                            <field name="ma_languages"/>
+                            <button name="action_ma_activate_languages" type="object" string="Activate languages" class="btn-link"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

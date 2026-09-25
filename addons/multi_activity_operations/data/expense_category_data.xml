@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="expense_cat_rent" model="multi.activity.expense.category">
+        <field name="name">Rent</field>
+        <field name="code">rent</field>
+    </record>
+    <record id="expense_cat_utilities" model="multi.activity.expense.category">
+        <field name="name">Utilities</field>
+        <field name="code">utilities</field>
+    </record>
+    <record id="expense_cat_supplies" model="multi.activity.expense.category">
+        <field name="name">Supplies</field>
+        <field name="code">supplies</field>
+    </record>
+    <record id="expense_cat_payroll" model="multi.activity.expense.category">
+        <field name="name">Staff</field>
+        <field name="code">staff</field>
+    </record>
+    <record id="expense_cat_other" model="multi.activity.expense.category">
+        <field name="name">Other</field>
+        <field name="code">other</field>
+    </record>
+</odoo>

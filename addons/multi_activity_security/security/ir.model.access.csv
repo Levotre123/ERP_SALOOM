@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ma_establishment_owner,establishment.owner,multi_activity_core.model_multi_activity_establishment,group_tenant_owner,1,1,1,0
+access_ma_establishment_admin,establishment.admin,multi_activity_core.model_multi_activity_establishment,group_company_admin,1,1,1,0
+access_ma_establishment_manager,establishment.manager,multi_activity_core.model_multi_activity_establishment,group_manager,1,1,0,0
+access_ma_business_type_owner,business.type.owner,multi_activity_core.model_multi_activity_business_type,group_tenant_owner,1,0,0,0
+access_ma_ticket_owner,ticket.owner,multi_activity_saas.model_multi_activity_ticket,group_tenant_owner,1,1,1,0
+access_ma_tenant_owner_read,tenant.owner.read,multi_activity_saas.model_multi_activity_tenant,group_tenant_owner,1,0,0,0

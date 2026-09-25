@@ -1,0 +1,31 @@
+{
+    "name": "Multi-Activity Core",
+    "version": "18.0.1.0.0",
+    "category": "Services",
+    "summary": "Establishments, business types, and user site scope",
+    "license": "LGPL-3",
+    "depends": ["base", "web", "mail", "contacts", "product", "stock", "hr", "point_of_sale"],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/business_type_data.xml",
+        "data/ir_sequence.xml",
+        "views/business_type_views.xml",
+        "views/establishment_views.xml",
+        "views/res_users_views.xml",
+        "views/res_company_views.xml",
+        "views/res_config_settings_views.xml",
+        "views/menus.xml",
+        "wizard/switch_establishment_views.xml",
+        "data/ir_config_parameter.xml",
+        "views/res_lang_views.xml",
+    ],
+    "assets": {
+        "web.assets_backend": [
+            "multi_activity_core/static/src/js/establishment_systray.js",
+            "multi_activity_core/static/src/xml/establishment_systray.xml",
+            "multi_activity_core/static/src/scss/establishment_systray.scss",
+        ],
+    },
+    "post_init_hook": "post_init_hook",
+    "installable": True,
+}

@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_restaurant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_restaurant
+#: model:ir.ui.menu,name:multi_activity_restaurant.menu_restaurant
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#. module: multi_activity_restaurant
+#: model:ir.ui.menu,name:multi_activity_restaurant.menu_restaurant_tables
+#: model:ir.actions.act_window,name:multi_activity_restaurant.action_table
+msgid "Tables"
+msgstr "Tables"
+
+#. module: multi_activity_restaurant
+#: model:ir.ui.menu,name:multi_activity_restaurant.menu_restaurant_orders
+#: model:ir.actions.act_window,name:multi_activity_restaurant.action_restaurant_order
+msgid "Orders / Kitchen"
+msgstr "Commandes / Cuisine"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_table__state__free
+msgid "Free"
+msgstr "Libre"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_table__state__occupied
+msgid "Occupied"
+msgstr "Occupée"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_order__state__new
+msgid "New"
+msgstr "Nouveau"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_order__state__preparation
+msgid "In preparation"
+msgstr "En préparation"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_order__state__ready
+msgid "Ready"
+msgstr "Prêt"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_order__state__served
+msgid "Served"
+msgstr "Servi"
+
+#. module: multi_activity_restaurant
+#: model:ir.model.fields.selection,name:multi_activity_restaurant.selection__restaurant_order__state__paid
+msgid "Paid"
+msgstr "Payé"
+
+#. module: multi_activity_restaurant
+#: model_terms:ir.ui.view,arch_db:multi_activity_restaurant.view_restaurant_order_form
+msgid "Send to kitchen"
+msgstr "Envoyer en cuisine"
+
+#. module: multi_activity_restaurant
+msgid "You are not allowed to cancel this order."
+msgstr "Vous n’êtes pas autorisé à annuler cette commande."

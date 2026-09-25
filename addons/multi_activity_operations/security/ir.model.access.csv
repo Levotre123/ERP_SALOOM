@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_expense_cat_user,expense.category.user,model_multi_activity_expense_category,base.group_user,1,0,0,0
+access_expense_cat_owner,expense.category.owner,model_multi_activity_expense_category,multi_activity_security.group_tenant_owner,1,1,1,0
+access_expense_user,expense.user,model_multi_activity_expense,base.group_user,1,1,1,0
+access_expense_owner,expense.owner,model_multi_activity_expense,multi_activity_security.group_tenant_owner,1,1,1,0
+access_audit_user,audit.user,model_multi_activity_audit_log,base.group_user,1,1,1,0
+access_audit_system,audit.system,model_multi_activity_audit_log,base.group_system,1,1,1,0
+access_alert_user,alert.user,model_multi_activity_alert,base.group_user,1,1,1,0

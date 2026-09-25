@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="rule_expense_establishment" model="ir.rule">
+        <field name="name">Expense: assigned establishments</field>
+        <field name="model_id" ref="model_multi_activity_expense"/>
+        <field name="domain_force">[('establishment_id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_cashier')), (4, ref('multi_activity_security.group_manager')), (4, ref('multi_activity_security.group_storekeeper')), (4, ref('multi_activity_security.group_hairdresser')), (4, ref('multi_activity_security.group_waiter'))]"/>
+    </record>
+    <record id="rule_expense_owner" model="ir.rule">
+        <field name="name">Expense: owner company</field>
+        <field name="model_id" ref="model_multi_activity_expense"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_tenant_owner')), (4, ref('multi_activity_security.group_company_admin'))]"/>
+    </record>
+
+    <record id="rule_audit_company" model="ir.rule">
+        <field name="name">Audit: company</field>
+        <field name="model_id" ref="model_multi_activity_audit_log"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_alert_company" model="ir.rule">
+        <field name="name">Alert: company</field>
+        <field name="model_id" ref="model_multi_activity_alert"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_pos_order_establishment" model="ir.rule">
+        <field name="name">POS order: assigned establishments</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="domain_force">['|', ('establishment_id', '=', False), ('establishment_id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_cashier')), (4, ref('multi_activity_security.group_manager')), (4, ref('multi_activity_security.group_waiter'))]"/>
+    </record>
+    <record id="rule_pos_session_establishment" model="ir.rule">
+        <field name="name">POS session: assigned establishments</field>
+        <field name="model_id" ref="point_of_sale.model_pos_session"/>
+        <field name="domain_force">['|', ('establishment_id', '=', False), ('establishment_id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_cashier')), (4, ref('multi_activity_security.group_manager'))]"/>
+    </record>
+</odoo>

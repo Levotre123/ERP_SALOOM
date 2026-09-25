@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-25 00:00+0000\n"
+"PO-Revision-Date: 2026-09-25 00:00+0000\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_core
+#: model:ir.module.module,shortdesc:base.module_multi_activity_core
+msgid "Multi-Activity Core"
+msgstr "Cœur multi-activité"
+
+#. module: multi_activity_core
+#: model:ir.module.module,summary:base.module_multi_activity_core
+msgid "Establishments, business types, and user site scope"
+msgstr "Établissements, types d’activité et périmètre utilisateur"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_root
+msgid "Business"
+msgstr "Gestion"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_activity
+msgid "Activity"
+msgstr "Activité"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_establishment
+msgid "Establishments"
+msgstr "Établissements"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_business_type
+msgid "Business Types"
+msgstr "Types d’activité"
+
+#. module: multi_activity_core
+#: model:ir.ui.menu,name:multi_activity_core.menu_ma_languages
+msgid "Languages"
+msgstr "Langues"
+
+#. module: multi_activity_core
+#: model:ir.actions.act_window,name:multi_activity_core.action_establishment
+msgid "Establishments"
+msgstr "Établissements"
+
+#. module: multi_activity_core
+#: model:ir.actions.act_window,name:multi_activity_core.action_business_type
+msgid "Business Types"
+msgstr "Types d’activité"
+
+#. module: multi_activity_core
+#: model:ir.actions.server,name:multi_activity_core.action_languages
+msgid "Languages"
+msgstr "Langues"
+
+#. module: multi_activity_core
+#: model:ir.model,name:multi_activity_core.model_multi_activity_establishment
+msgid "Establishment"
+msgstr "Établissement"
+
+#. module: multi_activity_core
+#: model:ir.model,name:multi_activity_core.model_multi_activity_business_type
+msgid "Business Activity Type"
+msgstr "Type d’activité"
+
+#. module: multi_activity_core
+#: model:ir.model,name:multi_activity_core.model_multi_activity_switch_establishment
+msgid "Switch current establishment"
+msgstr "Changer d’établissement"
+
+#. module: multi_activity_core
+#: model:ir.model.fields,field_description:multi_activity_core.field_res_users__establishment_ids
+msgid "Allowed Establishments"
+msgstr "Établissements autorisés"
+
+#. module: multi_activity_core
+#: model:ir.model.fields,field_description:multi_activity_core.field_res_users__default_establishment_id
+msgid "Default Establishment"
+msgstr "Établissement par défaut"
+
+#. module: multi_activity_core
+#: model:ir.model.fields,field_description:multi_activity_core.field_res_users__current_establishment_id
+msgid "Current Establishment"
+msgstr "Établissement actuel"
+
+#. module: multi_activity_core
+#: model:ir.model.fields,field_description:multi_activity_core.field_multi_activity_establishment__tz
+msgid "Timezone"
+msgstr "Fuseau horaire"
+
+#. module: multi_activity_core
+#: model_terms:ir.ui.view,arch_db:multi_activity_core.view_users_form_establishment
+msgid "Establishments"
+msgstr "Établissements"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_salon
+msgid "Hair Salon"
+msgstr "Salon de coiffure"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_barber
+msgid "Barber Shop"
+msgstr "Barbershop"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_restaurant
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_bar
+msgid "Bar"
+msgstr "Bar"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_cafe
+msgid "Café"
+msgstr "Café"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_snack
+msgid "Snack"
+msgstr "Snack"
+
+#. module: multi_activity_core
+#: model:multi.activity.business.type,name:multi_activity_core.type_other
+msgid "Other"
+msgstr "Autre"
+
+#. module: multi_activity_core
+msgid "Switch Establishment"
+msgstr "Changer d’établissement"
+
+#. module: multi_activity_core
+msgid "You are not authorized for this establishment."
+msgstr "Vous n’êtes pas autorisé pour cet établissement."
+
+#. module: multi_activity_core
+#: model:ir.model.fields,field_description:multi_activity_core.field_res_config_settings__ma_languages
+msgid "Extra languages"
+msgstr "Langues supplémentaires"
+
+#. module: multi_activity_core
+#: model_terms:ir.ui.view,arch_db:multi_activity_core.res_config_settings_view_form_ma
+msgid "Extra interface languages"
+msgstr "Langues d’interface supplémentaires"
+
+#. module: multi_activity_core
+#: model_terms:ir.ui.view,arch_db:multi_activity_core.res_config_settings_view_form_ma
+msgid "Activate languages"
+msgstr "Activer les langues"
+
+#. module: multi_activity_core
+#: model_terms:ir.ui.view,arch_db:multi_activity_core.res_config_settings_view_form_ma
+msgid "Manage establishments"
+msgstr "Gérer les établissements"
+
+#. module: multi_activity_core
+#: model_terms:ir.ui.view,arch_db:multi_activity_core.res_config_settings_view_form_ma
+msgid "Sites"
+msgstr "Sites"
+
+#. module: multi_activity_core
+msgid "Recommended languages have been activated."
+msgstr "Les langues recommandées ont été activées."
+
+#. module: multi_activity_core
+msgid "Establishment"
+msgstr "Établissement"

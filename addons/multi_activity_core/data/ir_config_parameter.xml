@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="param_languages" model="ir.config_parameter">
+        <field name="key">multi_activity.languages</field>
+        <field name="value">fr_FR</field>
+    </record>
+</odoo>

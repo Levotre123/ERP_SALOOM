@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="rule_table_company" model="ir.rule">
+        <field name="name">Restaurant table: company</field>
+        <field name="model_id" ref="model_restaurant_table"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_order_company" model="ir.rule">
+        <field name="name">Restaurant order: company</field>
+        <field name="model_id" ref="model_restaurant_order"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_table_establishment" model="ir.rule">
+        <field name="name">Restaurant table: establishment</field>
+        <field name="model_id" ref="model_restaurant_table"/>
+        <field name="domain_force">[('establishment_id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_waiter')), (4, ref('multi_activity_security.group_cashier')), (4, ref('multi_activity_security.group_manager'))]"/>
+    </record>
+    <record id="rule_order_establishment" model="ir.rule">
+        <field name="name">Restaurant order: establishment</field>
+        <field name="model_id" ref="model_restaurant_order"/>
+        <field name="domain_force">[('establishment_id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('multi_activity_security.group_waiter')), (4, ref('multi_activity_security.group_cashier')), (4, ref('multi_activity_security.group_manager'))]"/>
+    </record>
+</odoo>

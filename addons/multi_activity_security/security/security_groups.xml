@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_multi_activity" model="ir.module.category">
+        <field name="name">Multi-Activity</field>
+        <field name="description">SaaS roles for multi-activity businesses</field>
+        <field name="sequence">45</field>
+    </record>
+
+    <record id="group_platform_admin" model="res.groups">
+        <field name="name">Platform Administrator</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_system'))]"/>
+        <field name="comment">Manages tenants, plans, and support. Does not receive tenant company access.</field>
+    </record>
+    <record id="group_tenant_owner" model="res.groups">
+        <field name="name">Tenant Owner</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('point_of_sale.group_pos_manager')), (4, ref('stock.group_stock_manager')), (4, ref('hr.group_hr_user'))]"/>
+    </record>
+    <record id="group_company_admin" model="res.groups">
+        <field name="name">Company Administrator</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('point_of_sale.group_pos_manager')), (4, ref('stock.group_stock_user')), (4, ref('hr.group_hr_user'))]"/>
+    </record>
+    <record id="group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('point_of_sale.group_pos_manager')), (4, ref('stock.group_stock_user'))]"/>
+    </record>
+    <record id="group_cashier" model="res.groups">
+        <field name="name">Cashier</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>
+    </record>
+    <record id="group_waiter" model="res.groups">
+        <field name="name">Waiter</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="group_hairdresser" model="res.groups">
+        <field name="name">Hairdresser / Barber</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="group_storekeeper" model="res.groups">
+        <field name="name">Storekeeper</field>
+        <field name="category_id" ref="module_category_multi_activity"/>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+    </record>
+</odoo>

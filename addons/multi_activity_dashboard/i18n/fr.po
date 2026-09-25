@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_dashboard
+#: model:ir.ui.menu,name:multi_activity_dashboard.menu_dashboard
+#: model:ir.actions.server,name:multi_activity_dashboard.action_dashboard
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__period
+msgid "Period"
+msgstr "Période"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields.selection,name:multi_activity_dashboard.selection__multi_activity_dashboard__period__today
+msgid "Today"
+msgstr "Aujourd’hui"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields.selection,name:multi_activity_dashboard.selection__multi_activity_dashboard__period__week
+msgid "This week"
+msgstr "Cette semaine"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields.selection,name:multi_activity_dashboard.selection__multi_activity_dashboard__period__month
+msgid "This month"
+msgstr "Ce mois"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields.selection,name:multi_activity_dashboard.selection__multi_activity_dashboard__period__custom
+msgid "Custom"
+msgstr "Personnalisé"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__all_establishments
+msgid "All establishments"
+msgstr "Tous les établissements"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__revenue
+msgid "Revenue"
+msgstr "Chiffre d’affaires"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__cash_received
+msgid "Cash Received"
+msgstr "Encaissements"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__expense_total
+msgid "Expense Total"
+msgstr "Dépenses"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__estimated_profit
+msgid "Estimated Profit"
+msgstr "Bénéfice estimé"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__previous_revenue
+msgid "Previous Revenue"
+msgstr "CA période précédente"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__transaction_count
+msgid "Transaction Count"
+msgstr "Nombre de transactions"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__low_stock_count
+msgid "Low Stock Count"
+msgstr "Articles en stock bas"
+
+#. module: multi_activity_dashboard
+#: model:ir.model.fields,field_description:multi_activity_dashboard.field_multi_activity_dashboard__cash_alert_count
+msgid "Cash Alert Count"
+msgstr "Écarts de caisse"
+
+#. module: multi_activity_dashboard
+#: model_terms:ir.ui.view,arch_db:multi_activity_dashboard.view_dashboard_form
+msgid "Refresh"
+msgstr "Actualiser"
+
+#. module: multi_activity_dashboard
+msgid "Unassigned"
+msgstr "Non affecté"
+
+#. module: multi_activity_dashboard
+msgid ""
+"<p><b>Estimated profit</b> = Revenue (paid POS) − confirmed operational expenses. "
+"Cash received is POS payments in the period and is not the same as revenue.</p>"
+"<ul>%s</ul>"
+msgstr ""
+"<p><b>Bénéfice estimé</b> = Chiffre d’affaires (POS payé) − dépenses opérationnelles confirmées. "
+"Les encaissements sont les paiements POS de la période et ne sont pas le chiffre d’affaires.</p>"
+"<ul>%s</ul>"

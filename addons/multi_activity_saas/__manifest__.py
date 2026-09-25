@@ -1,0 +1,23 @@
+{
+    "name": "Multi-Activity SaaS",
+    "version": "18.0.1.0.0",
+    "category": "Services",
+    "summary": "Tenants, plans, subscriptions, provisioning, support tickets",
+    "license": "LGPL-3",
+    "depends": ["multi_activity_core"],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/ir_sequence.xml",
+        "data/feature_data.xml",
+        "data/plan_data.xml",
+        "data/ir_cron.xml",
+        "views/feature_views.xml",
+        "views/plan_views.xml",
+        "views/subscription_views.xml",
+        "views/tenant_views.xml",
+        "views/ticket_views.xml",
+        "views/provisioning_log_views.xml",
+        "views/menus.xml",
+    ],
+    "installable": True,
+}

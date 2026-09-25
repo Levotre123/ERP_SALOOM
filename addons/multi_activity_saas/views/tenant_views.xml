@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tenant_list" model="ir.ui.view">
+        <field name="name">multi.activity.tenant.list</field>
+        <field name="model">multi.activity.tenant</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="email"/>
+                <field name="plan_id"/>
+                <field name="state" decoration-success="state == 'active'" decoration-info="state == 'trial'" decoration-warning="state in ('past_due', 'expired')" decoration-danger="state == 'suspended'"/>
+                <field name="provisioning_state"/>
+                <field name="date_trial_end"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_tenant_form" model="ir.ui.view">
+        <field name="name">multi.activity.tenant.form</field>
+        <field name="model">multi.activity.tenant</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_provision" type="object" string="Provision" class="btn-primary" invisible="provisioning_state == 'done'"/>
+                    <button name="action_provision" type="object" string="Retry Provisioning" invisible="provisioning_state != 'failed'"/>
+                    <button name="action_activate" type="object" string="Activate" invisible="state in ('active', 'cancelled')"/>
+                    <button name="action_suspend" type="object" string="Suspend" invisible="state in ('suspended', 'cancelled', 'draft')"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state == 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,trial,active,past_due,suspended,cancelled"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(action_subscription)d" type="action" class="oe_stat_button" icon="fa-refresh" context="{'search_default_tenant_id': id}">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Subscription</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="plan_id"/>
+                            <field name="subscription_id"/>
+                            <field name="business_type_id"/>
+                            <field name="owner_id"/>
+                            <field name="partner_id"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="country_id"/>
+                            <field name="currency_id"/>
+                            <field name="lang"/>
+                            <field name="domain"/>
+                            <field name="date_registration"/>
+                            <field name="date_trial_end"/>
+                            <field name="company_id"/>
+                            <field name="establishment_count"/>
+                            <field name="user_count"/>
+                        </group>
+                    </group>
+                    <group string="Provisioning">
+                        <field name="provisioning_state"/>
+                        <field name="database_name"/>
+                        <field name="provisioning_error" invisible="not provisioning_error"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="view_tenant_search" model="ir.ui.view">
+        <field name="name">multi.activity.tenant.search</field>
+        <field name="model">multi.activity.tenant</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="code"/>
+                <filter name="filter_trial" string="Trial" domain="[('state', '=', 'trial')]"/>
+                <filter name="filter_active" string="Active" domain="[('state', '=', 'active')]"/>
+                <filter name="filter_suspended" string="Suspended" domain="[('state', '=', 'suspended')]"/>
+                <group>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_plan" string="Plan" context="{'group_by': 'plan_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_tenant" model="ir.actions.act_window">
+        <field name="name">Tenants</field>
+        <field name="res_model">multi.activity.tenant</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_filter_active': 0}</field>
+    </record>
+</odoo>

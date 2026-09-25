@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_dashboard_form" model="ir.ui.view">
+        <field name="name">multi.activity.dashboard.form</field>
+        <field name="model">multi.activity.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard" create="false" delete="false">
+                <header>
+                    <button name="action_refresh" type="object" string="Refresh" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="period"/>
+                            <field name="date_from" invisible="period != 'custom'"/>
+                            <field name="date_to" invisible="period != 'custom'"/>
+                            <field name="establishment_id" invisible="all_establishments"/>
+                            <field name="all_establishments" groups="multi_activity_security.group_tenant_owner,multi_activity_security.group_company_admin"/>
+                        </group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="revenue"/>
+                            <field name="cash_received"/>
+                            <field name="expense_total"/>
+                            <field name="estimated_profit"/>
+                            <field name="previous_revenue"/>
+                            <field name="transaction_count"/>
+                            <field name="low_stock_count"/>
+                            <field name="cash_alert_count"/>
+                        </group>
+                    </group>
+                    <field name="note" nolabel="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_dashboard" model="ir.actions.server">
+        <field name="name">Dashboard</field>
+        <field name="model_id" ref="model_multi_activity_dashboard"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open()</field>
+    </record>
+</odoo>

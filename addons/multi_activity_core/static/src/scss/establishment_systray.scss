@@ -1,0 +1,9 @@
+.o_ma_establishment_systray {
+    .o_ma_establishment_name {
+        max-width: 12rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+}

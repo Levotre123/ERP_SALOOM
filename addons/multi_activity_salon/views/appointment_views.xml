@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_appointment_list" model="ir.ui.view">
+        <field name="name">salon.appointment.list</field>
+        <field name="model">salon.appointment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="start_datetime"/>
+                <field name="partner_id"/>
+                <field name="employee_id"/>
+                <field name="product_id"/>
+                <field name="establishment_id"/>
+                <field name="price"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_appointment_form" model="ir.ui.view">
+        <field name="name">salon.appointment.form</field>
+        <field name="model">salon.appointment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_start" type="object" string="Start" invisible="state != 'confirmed'"/>
+                    <button name="action_done" type="object" string="Complete" invisible="state != 'in_progress'"/>
+                    <button name="action_no_show" type="object" string="No show" invisible="state not in ('confirmed', 'in_progress')"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state in ('cancelled', 'done')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,in_progress,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="partner_id"/>
+                            <field name="employee_id"/>
+                            <field name="product_id"/>
+                            <field name="establishment_id"/>
+                        </group>
+                        <group>
+                            <field name="start_datetime"/>
+                            <field name="duration"/>
+                            <field name="end_datetime"/>
+                            <field name="price"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="commission_percent"/>
+                            <field name="commission_amount"/>
+                        </group>
+                    </group>
+                    <field name="notes" placeholder="Notes"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="view_appointment_calendar" model="ir.ui.view">
+        <field name="name">salon.appointment.calendar</field>
+        <field name="model">salon.appointment</field>
+        <field name="arch" type="xml">
+            <calendar date_start="start_datetime" date_stop="end_datetime" color="employee_id" mode="week">
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <field name="employee_id"/>
+            </calendar>
+        </field>
+    </record>
+    <record id="view_appointment_search" model="ir.ui.view">
+        <field name="name">salon.appointment.search</field>
+        <field name="model">salon.appointment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="employee_id"/>
+                <field name="establishment_id"/>
+                <filter name="filter_confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <group>
+                    <filter name="group_employee" string="Employee" context="{'group_by': 'employee_id'}"/>
+                    <filter name="group_establishment" string="Establishment" context="{'group_by': 'establishment_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">salon.appointment</field>
+        <field name="view_mode">calendar,list,form</field>
+    </record>
+</odoo>

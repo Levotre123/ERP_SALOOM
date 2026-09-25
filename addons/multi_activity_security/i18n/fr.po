@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_security
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_security
+#: model:ir.module.category,name:multi_activity_security.module_category_multi_activity
+msgid "Multi-Activity"
+msgstr "Multi-activité"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_platform_admin
+msgid "Platform Administrator"
+msgstr "Administrateur plateforme"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_tenant_owner
+msgid "Tenant Owner"
+msgstr "Propriétaire"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_company_admin
+msgid "Company Administrator"
+msgstr "Administrateur société"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_manager
+msgid "Manager"
+msgstr "Manager"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_cashier
+msgid "Cashier"
+msgstr "Caissier"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_waiter
+msgid "Waiter"
+msgstr "Serveur"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_hairdresser
+msgid "Hairdresser / Barber"
+msgstr "Coiffeur / Barbier"
+
+#. module: multi_activity_security
+#: model:res.groups,name:multi_activity_security.group_storekeeper
+msgid "Storekeeper"
+msgstr "Magasinier"
+
+#. module: multi_activity_security
+msgid "This subscription is not active."
+msgstr "Cet abonnement n’est pas actif."
+
+#. module: multi_activity_security
+msgid "Feature %(code)s is not included in the current plan."
+msgstr "La fonctionnalité %(code)s n’est pas incluse dans le forfait actuel."
+
+#. module: multi_activity_security
+msgid "Plan %(plan)s allows %(max)s establishment(s). Limit reached."
+msgstr "Le forfait %(plan)s autorise %(max)s établissement(s). Limite atteinte."
+
+#. module: multi_activity_security
+msgid "Plan %(plan)s allows %(max)s user(s). Limit reached."
+msgstr "Le forfait %(plan)s autorise %(max)s utilisateur(s). Limite atteinte."

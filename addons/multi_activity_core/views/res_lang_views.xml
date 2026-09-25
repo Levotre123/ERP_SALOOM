@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_languages" model="ir.actions.server">
+        <field name="name">Languages</field>
+        <field name="model_id" ref="base.model_res_lang"/>
+        <field name="state">code</field>
+        <field name="code">
+model._ma_ensure_recommended_languages()
+action = {
+    "type": "ir.actions.act_window",
+    "name": "Languages",
+    "res_model": "res.lang",
+    "view_mode": "list,form",
+    "domain": [("active", "in", [True, False])],
+    "context": {"active_test": False},
+}
+        </field>
+    </record>
+    <menuitem
+        id="menu_ma_languages"
+        name="Languages"
+        parent="menu_ma_settings"
+        action="action_languages"
+        sequence="40"
+        groups="base.group_system"
+    />
+</odoo>

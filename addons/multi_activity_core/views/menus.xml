@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_ma_root"
+        name="Business"
+        sequence="5"
+        web_icon="multi_activity_core,static/description/icon.png"
+    />
+    <menuitem id="menu_ma_activity" name="Activity" parent="menu_ma_root" sequence="75"/>
+    <menuitem id="menu_ma_settings" name="Settings" parent="menu_ma_root" sequence="90"/>
+    <menuitem
+        id="menu_ma_establishment"
+        name="Establishments"
+        parent="menu_ma_settings"
+        action="action_establishment"
+        sequence="10"
+    />
+    <menuitem
+        id="menu_ma_business_type"
+        name="Business Types"
+        parent="menu_ma_settings"
+        action="action_business_type"
+        sequence="20"
+        groups="base.group_system"
+    />
+    <menuitem
+        id="menu_ma_establishment_base"
+        name="Establishments"
+        parent="base.menu_users"
+        action="action_establishment"
+        sequence="25"
+    />
+</odoo>

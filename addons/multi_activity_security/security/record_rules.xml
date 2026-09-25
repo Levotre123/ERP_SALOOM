@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="rule_establishment_assigned" model="ir.rule">
+        <field name="name">Establishment: assigned only</field>
+        <field name="model_id" ref="multi_activity_core.model_multi_activity_establishment"/>
+        <field name="domain_force">[('id', 'in', user.establishment_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('group_cashier')), (4, ref('group_waiter')), (4, ref('group_hairdresser')), (4, ref('group_storekeeper')), (4, ref('group_manager'))]"/>
+    </record>
+    <record id="rule_establishment_owner_company" model="ir.rule">
+        <field name="name">Establishment: owner all company sites</field>
+        <field name="model_id" ref="multi_activity_core.model_multi_activity_establishment"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('group_tenant_owner')), (4, ref('group_company_admin'))]"/>
+    </record>
+
+    <record id="rule_tenant_own" model="ir.rule">
+        <field name="name">Tenant: own company only</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_tenant"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_tenant_platform" model="ir.rule">
+        <field name="name">Tenant: platform sees all</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_tenant"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_platform_admin'))]"/>
+    </record>
+
+    <record id="rule_subscription_own" model="ir.rule">
+        <field name="name">Subscription: own company</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_subscription"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_subscription_platform" model="ir.rule">
+        <field name="name">Subscription: platform sees all</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_subscription"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_platform_admin'))]"/>
+    </record>
+
+    <record id="rule_ticket_own" model="ir.rule">
+        <field name="name">Ticket: own tenant</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_ticket"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_ticket_platform" model="ir.rule">
+        <field name="name">Ticket: platform sees all</field>
+        <field name="model_id" ref="multi_activity_saas.model_multi_activity_ticket"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_platform_admin'))]"/>
+    </record>
+</odoo>

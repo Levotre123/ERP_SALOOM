@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_bar"
+        name="Bar"
+        parent="multi_activity_core.menu_ma_activity"
+        action="product.product_template_action"
+        sequence="30"
+    />
+</odoo>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_expense_list" model="ir.ui.view">
+        <field name="name">multi.activity.expense.list</field>
+        <field name="model">multi.activity.expense</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="category_id"/>
+                <field name="establishment_id"/>
+                <field name="user_id"/>
+                <field name="amount" sum="Total"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_expense_form" model="ir.ui.view">
+        <field name="name">multi.activity.expense.form</field>
+        <field name="model">multi.activity.expense</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state == 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,cancelled"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="category_id"/>
+                            <field name="date"/>
+                            <field name="amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="establishment_id"/>
+                            <field name="user_id"/>
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </group>
+                    </group>
+                    <field name="note" placeholder="Comment"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="view_expense_search" model="ir.ui.view">
+        <field name="name">multi.activity.expense.search</field>
+        <field name="model">multi.activity.expense</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="establishment_id"/>
+                <field name="user_id"/>
+                <filter name="filter_confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <group>
+                    <filter name="group_category" string="Category" context="{'group_by': 'category_id'}"/>
+                    <filter name="group_establishment" string="Establishment" context="{'group_by': 'establishment_id'}"/>
+                    <filter name="group_user" string="User" context="{'group_by': 'user_id'}"/>
+                    <filter name="group_date" string="Date" context="{'group_by': 'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_expense" model="ir.actions.act_window">
+        <field name="name">Expenses</field>
+        <field name="res_model">multi.activity.expense</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="view_expense_category_list" model="ir.ui.view">
+        <field name="name">multi.activity.expense.category.list</field>
+        <field name="model">multi.activity.expense.category</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_expense_category" model="ir.actions.act_window">
+        <field name="name">Expense Categories</field>
+        <field name="res_model">multi.activity.expense.category</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_salon"
+        name="Salon"
+        parent="multi_activity_core.menu_ma_activity"
+        action="action_appointment"
+        sequence="10"
+    />
+</odoo>

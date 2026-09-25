@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="multi_activity_core.EstablishmentSystray">
+        <div class="o_ma_establishment_systray d-flex align-items-center">
+            <button
+                class="btn btn-outline-secondary btn-sm o-dropdown-toggle"
+                t-on-click="onClick"
+                title="Switch establishment"
+            >
+                <i class="fa fa-building-o me-1"/>
+                <span class="o_ma_establishment_name" t-esc="label"/>
+            </button>
+        </div>
+    </t>
+</templates>

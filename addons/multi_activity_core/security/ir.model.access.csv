@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ma_business_type_user,multi.activity.business.type.user,model_multi_activity_business_type,base.group_user,1,0,0,0
+access_ma_business_type_manager,multi.activity.business.type.manager,model_multi_activity_business_type,base.group_system,1,1,1,1
+access_ma_establishment_user,multi.activity.establishment.user,model_multi_activity_establishment,base.group_user,1,0,0,0
+access_ma_establishment_manager,multi.activity.establishment.manager,model_multi_activity_establishment,base.group_system,1,1,1,1
+access_ma_switch_est,multi.activity.switch.establishment.user,model_multi_activity_switch_establishment,base.group_user,1,1,1,1

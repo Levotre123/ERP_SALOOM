@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="feature_sales" model="multi.activity.feature">
+        <field name="name">Sales</field>
+        <field name="code">sales</field>
+        <field name="category">core</field>
+    </record>
+    <record id="feature_pos" model="multi.activity.feature">
+        <field name="name">POS</field>
+        <field name="code">pos</field>
+        <field name="category">core</field>
+    </record>
+    <record id="feature_cash" model="multi.activity.feature">
+        <field name="name">Cash</field>
+        <field name="code">cash</field>
+        <field name="category">core</field>
+    </record>
+    <record id="feature_products" model="multi.activity.feature">
+        <field name="name">Products</field>
+        <field name="code">products</field>
+        <field name="category">core</field>
+    </record>
+    <record id="feature_stock_basic" model="multi.activity.feature">
+        <field name="name">Basic Stock</field>
+        <field name="code">stock_basic</field>
+        <field name="category">stock</field>
+    </record>
+    <record id="feature_stock_advanced" model="multi.activity.feature">
+        <field name="name">Advanced Stock</field>
+        <field name="code">stock_advanced</field>
+        <field name="category">stock</field>
+    </record>
+    <record id="feature_reports_basic" model="multi.activity.feature">
+        <field name="name">Basic Reports</field>
+        <field name="code">reports_basic</field>
+        <field name="category">report</field>
+    </record>
+    <record id="feature_reports_advanced" model="multi.activity.feature">
+        <field name="name">Advanced Reports</field>
+        <field name="code">reports_advanced</field>
+        <field name="category">report</field>
+    </record>
+    <record id="feature_employees" model="multi.activity.feature">
+        <field name="name">Employees</field>
+        <field name="code">employees</field>
+        <field name="category">core</field>
+    </record>
+    <record id="feature_salon" model="multi.activity.feature">
+        <field name="name">Salon / Barber</field>
+        <field name="code">industry_salon</field>
+        <field name="category">industry</field>
+    </record>
+    <record id="feature_restaurant" model="multi.activity.feature">
+        <field name="name">Restaurant</field>
+        <field name="code">industry_restaurant</field>
+        <field name="category">industry</field>
+    </record>
+    <record id="feature_bar" model="multi.activity.feature">
+        <field name="name">Bar</field>
+        <field name="code">industry_bar</field>
+        <field name="category">industry</field>
+    </record>
+    <record id="feature_multi_est" model="multi.activity.feature">
+        <field name="name">Multi-establishment</field>
+        <field name="code">multi_establishment</field>
+        <field name="category">premium</field>
+    </record>
+    <record id="feature_consolidation" model="multi.activity.feature">
+        <field name="name">Consolidation</field>
+        <field name="code">consolidation</field>
+        <field name="category">premium</field>
+    </record>
+</odoo>

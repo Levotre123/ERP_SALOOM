@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_restaurant"
+        name="Restaurant"
+        parent="multi_activity_core.menu_ma_activity"
+        sequence="20"
+    />
+    <menuitem
+        id="menu_restaurant_tables"
+        name="Tables"
+        parent="menu_restaurant"
+        action="action_table"
+        sequence="10"
+    />
+    <menuitem
+        id="menu_restaurant_orders"
+        name="Orders / Kitchen"
+        parent="menu_restaurant"
+        action="action_restaurant_order"
+        sequence="20"
+    />
+</odoo>

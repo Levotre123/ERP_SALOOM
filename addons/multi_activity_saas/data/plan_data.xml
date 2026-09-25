@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="plan_basic" model="multi.activity.plan">
+        <field name="name">Basic</field>
+        <field name="code">basic</field>
+        <field name="sequence">10</field>
+        <field name="currency_id" ref="base.USD"/>
+        <field name="max_establishments">1</field>
+        <field name="max_users">3</field>
+        <field name="trial_days">14</field>
+        <field name="feature_ids" eval="[(6, 0, [
+            ref('feature_sales'), ref('feature_pos'), ref('feature_cash'),
+            ref('feature_products'), ref('feature_stock_basic'), ref('feature_reports_basic')
+        ])]"/>
+    </record>
+    <record id="plan_pro" model="multi.activity.plan">
+        <field name="name">Pro</field>
+        <field name="code">pro</field>
+        <field name="sequence">20</field>
+        <field name="currency_id" ref="base.USD"/>
+        <field name="max_establishments">1</field>
+        <field name="max_users">10</field>
+        <field name="trial_days">14</field>
+        <field name="feature_ids" eval="[(6, 0, [
+            ref('feature_sales'), ref('feature_pos'), ref('feature_cash'),
+            ref('feature_products'), ref('feature_stock_basic'), ref('feature_stock_advanced'),
+            ref('feature_reports_basic'), ref('feature_reports_advanced'),
+            ref('feature_employees'), ref('feature_salon')
+        ])]"/>
+    </record>
+    <record id="plan_business" model="multi.activity.plan">
+        <field name="name">Business</field>
+        <field name="code">business</field>
+        <field name="sequence">30</field>
+        <field name="currency_id" ref="base.USD"/>
+        <field name="max_establishments">10</field>
+        <field name="max_users">50</field>
+        <field name="trial_days">14</field>
+        <field name="feature_ids" eval="[(6, 0, [
+            ref('feature_sales'), ref('feature_pos'), ref('feature_cash'),
+            ref('feature_products'), ref('feature_stock_basic'), ref('feature_stock_advanced'),
+            ref('feature_reports_basic'), ref('feature_reports_advanced'),
+            ref('feature_employees'), ref('feature_salon'), ref('feature_restaurant'),
+            ref('feature_bar'), ref('feature_multi_est'), ref('feature_consolidation')
+        ])]"/>
+    </record>
+</odoo>

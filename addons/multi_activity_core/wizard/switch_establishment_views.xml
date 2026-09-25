@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_switch_establishment_form" model="ir.ui.view">
+        <field name="name">multi.activity.switch.establishment.form</field>
+        <field name="model">multi.activity.switch.establishment</field>
+        <field name="arch" type="xml">
+            <form string="Switch Establishment">
+                <group>
+                    <field name="establishment_id" options="{'no_create': True}"/>
+                </group>
+                <footer>
+                    <button name="action_switch" type="object" string="Switch" class="btn-primary"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_switch_establishment" model="ir.actions.act_window">
+        <field name="name">Switch Establishment</field>
+        <field name="res_model">multi.activity.switch.establishment</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="menu_switch_establishment"
+        name="Switch Establishment"
+        parent="menu_ma_root"
+        action="action_switch_establishment"
+        sequence="2"
+    />
+</odoo>

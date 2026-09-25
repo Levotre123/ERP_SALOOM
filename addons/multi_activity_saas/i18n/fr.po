@@ -1,0 +1,225 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multi_activity_saas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-25 00:00+0000\n"
+"PO-Revision-Date: 2026-09-25 00:00+0000\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: multi_activity_saas
+#: model:ir.module.module,shortdesc:base.module_multi_activity_saas
+msgid "Multi-Activity SaaS"
+msgstr "SaaS multi-activité"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_root
+msgid "SaaS Admin"
+msgstr "Admin SaaS"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_tenants
+#: model:ir.actions.act_window,name:multi_activity_saas.action_tenant
+msgid "Tenants"
+msgstr "Clients SaaS"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_plans
+#: model:ir.actions.act_window,name:multi_activity_saas.action_plan
+msgid "Plans"
+msgstr "Forfaits"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_subscriptions
+#: model:ir.actions.act_window,name:multi_activity_saas.action_subscription
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_features
+#: model:ir.actions.act_window,name:multi_activity_saas.action_feature
+msgid "Features"
+msgstr "Fonctionnalités"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_tickets
+#: model:ir.ui.menu,name:multi_activity_saas.menu_tenant_support
+#: model:ir.actions.act_window,name:multi_activity_saas.action_ticket
+msgid "Support"
+msgstr "Support"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_provisioning
+#: model:ir.actions.act_window,name:multi_activity_saas.action_provisioning_log
+msgid "Provisioning"
+msgstr "Provisionnement"
+
+#. module: multi_activity_saas
+#: model:ir.ui.menu,name:multi_activity_saas.menu_saas_languages
+msgid "Languages"
+msgstr "Langues"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields,field_description:multi_activity_saas.field_multi_activity_tenant__lang
+msgid "Language"
+msgstr "Langue"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__trial
+msgid "Trial"
+msgstr "Essai"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__past_due
+msgid "Past Due"
+msgstr "Impayé"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__suspended
+msgid "Suspended"
+msgstr "Suspendu"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__expired
+msgid "Expired"
+msgstr "Expiré"
+
+#. module: multi_activity_saas
+#: model:ir.model.fields.selection,name:multi_activity_saas.selection__multi_activity_tenant__state__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: multi_activity_saas
+#: model_terms:ir.ui.view,arch_db:multi_activity_saas.view_tenant_form
+msgid "Provision"
+msgstr "Provisionner"
+
+#. module: multi_activity_saas
+#: model_terms:ir.ui.view,arch_db:multi_activity_saas.view_tenant_form
+msgid "Retry Provisioning"
+msgstr "Relancer le provisionnement"
+
+#. module: multi_activity_saas
+#: model_terms:ir.ui.view,arch_db:multi_activity_saas.view_tenant_form
+msgid "Activate"
+msgstr "Activer"
+
+#. module: multi_activity_saas
+#: model_terms:ir.ui.view,arch_db:multi_activity_saas.view_tenant_form
+msgid "Suspend"
+msgstr "Suspendre"
+
+#. module: multi_activity_saas
+#: model_terms:ir.ui.view,arch_db:multi_activity_saas.view_tenant_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: multi_activity_saas
+#: model:multi.activity.plan,name:multi_activity_saas.plan_basic
+msgid "Basic"
+msgstr "Basic"
+
+#. module: multi_activity_saas
+#: model:multi.activity.plan,name:multi_activity_saas.plan_pro
+msgid "Pro"
+msgstr "Pro"
+
+#. module: multi_activity_saas
+#: model:multi.activity.plan,name:multi_activity_saas.plan_business
+msgid "Business"
+msgstr "Business"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_sales
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_pos
+msgid "POS"
+msgstr "Caisse"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_cash
+msgid "Cash"
+msgstr "Caisse"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_products
+msgid "Products"
+msgstr "Articles"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_stock_basic
+msgid "Basic Stock"
+msgstr "Stock de base"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_stock_advanced
+msgid "Advanced Stock"
+msgstr "Stock avancé"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_reports_basic
+msgid "Basic Reports"
+msgstr "Rapports de base"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_reports_advanced
+msgid "Advanced Reports"
+msgstr "Rapports avancés"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_employees
+msgid "Employees"
+msgstr "Employés"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_salon
+msgid "Salon / Barber"
+msgstr "Salon / Barbier"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_restaurant
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_bar
+msgid "Bar"
+msgstr "Bar"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_multi_est
+msgid "Multi-establishment"
+msgstr "Multi-établissements"
+
+#. module: multi_activity_saas
+#: model:multi.activity.feature,name:multi_activity_saas.feature_consolidation
+msgid "Consolidation"
+msgstr "Consolidation"
+
+#. module: multi_activity_saas
+msgid "Set a business type before provisioning."
+msgstr "Définissez un type d’activité avant le provisionnement."
+
+#. module: multi_activity_saas
+msgid "This subscription is suspended."
+msgstr "Cet abonnement est suspendu."
