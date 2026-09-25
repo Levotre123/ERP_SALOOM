@@ -1,0 +1,7 @@
+# Extra Python packages for custom addons only.
+# Official odoo:18.0 already provides Odoo, gevent, and greenlet.
+# Do not pin gevent/greenlet here unless a proven incompatibility exists.
+#
+# Add one package per line when a custom module actually imports it, e.g.:
+# openpyxl==3.1.5
+# xlsxwriter==3.2.2

@@ -1,0 +1,35 @@
+[options]
+; Generated at container start from environment variables.
+; Do not put secrets in this template. The entrypoint substitutes named tokens.
+; Odoo does not interpolate shell environment variables by itself.
+
+admin_passwd = {{ADMIN_PASSWD}}
+
+db_host = {{DB_HOST}}
+db_port = {{DB_PORT}}
+db_user = {{DB_USER}}
+db_password = {{DB_PASSWORD}}
+db_name = {{DB_NAME}}
+db_sslmode = {{DB_SSLMODE}}
+dbfilter = {{DBFILTER}}
+
+list_db = {{LIST_DB}}
+proxy_mode = {{PROXY_MODE}}
+
+data_dir = {{DATA_DIR}}
+addons_path = {{ADDONS_PATH}}
+
+http_interface = {{HTTP_INTERFACE}}
+http_port = {{HTTP_PORT}}
+
+workers = {{WORKERS}}
+max_cron_threads = {{MAX_CRON_THREADS}}
+limit_time_cpu = {{LIMIT_TIME_CPU}}
+limit_time_real = {{LIMIT_TIME_REAL}}
+limit_memory_soft = {{LIMIT_MEMORY_SOFT}}
+limit_memory_hard = {{LIMIT_MEMORY_HARD}}
+limit_request = {{LIMIT_REQUEST}}
+
+logfile = False
+log_level = {{LOG_LEVEL}}
+without_demo = {{WITHOUT_DEMO}}

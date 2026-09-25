@@ -1,0 +1,69 @@
+# Render Blueprint — Odoo 18 + managed PostgreSQL + persistent filestore.
+# Never put real passwords in this file.
+# Docs: https://render.com/docs/blueprint-spec
+#
+# After first deploy:
+# 1. Temporarily set ODOO_LIST_DB=True
+# 2. Create the Odoo database in the web UI using ODOO_ADMIN_PASSWD
+# 3. Set ODOO_LIST_DB=False again
+#
+# Web service and database MUST stay in the same region.
+
+services:
+  - type: web
+    name: odoo
+    runtime: docker
+    plan: standard
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /web/health
+    maxShutdownDelaySeconds: 120
+    disk:
+      name: odoo-filestore
+      mountPath: /var/lib/odoo
+      sizeGB: 10
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: odoo-postgres
+          property: connectionString
+      - key: DB_USER
+        fromDatabase:
+          name: odoo-postgres
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: odoo-postgres
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: odoo-postgres
+          property: database
+      - key: ODOO_ADMIN_PASSWD
+        generateValue: true
+      - key: ODOO_LIST_DB
+        value: "False"
+      - key: ODOO_PROXY_MODE
+        value: "True"
+      - key: ODOO_WORKERS
+        value: "0"
+      - key: ODOO_MAX_CRON_THREADS
+        value: "1"
+      - key: ODOO_LOG_LEVEL
+        value: info
+      - key: ODOO_DB_SSLMODE
+        value: prefer
+      - key: ODOO_WITHOUT_DEMO
+        value: "True"
+      - key: ODOO_AUTO_INIT_IF_EMPTY
+        value: "true"
+
+databases:
+  - name: odoo-postgres
+    postgresMajorVersion: "16"
+    region: frankfurt
+    plan: basic-1gb
+    databaseName: odoo
+    user: odoo
+    ipAllowList: []

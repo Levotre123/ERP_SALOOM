@@ -1,0 +1,35 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# Odoo runtime / filestore (never commit)
+filestore/
+local-filestore/
+*.log
+odoo.conf
+!odoo.conf.template
+
+# Backups
+backup/
+backups/
+*.dump
+*.sql
+*.backup
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local compose named volumes are Docker-managed; ignore accidental copies
+/var/lib/odoo/

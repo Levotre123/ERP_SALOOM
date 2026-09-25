@@ -1,0 +1,63 @@
+# Local verification only. Production on Render uses render.yaml + managed PostgreSQL.
+# Do not point this file at production credentials or a production filestore.
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: odoo
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - odoo-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  odoo:
+    build: .
+    image: odoo-render-test
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: odoo
+      DB_USER: odoo
+      DB_PASSWORD: odoo
+      ODOO_ADMIN_PASSWD: local-dev-only-change-me
+      PORT: "8069"
+      ODOO_LIST_DB: "True"
+      ODOO_PROXY_MODE: "False"
+      ODOO_WORKERS: "0"
+      ODOO_MAX_CRON_THREADS: "1"
+      ODOO_LOG_LEVEL: info
+      ODOO_WITHOUT_DEMO: "True"
+      ODOO_AUTO_INIT_IF_EMPTY: "true"
+    ports:
+      - "8069:8069"
+    volumes:
+      - odoo-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:%s/web/health' % os.environ.get('PORT','8069'), timeout=5)",
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 180s
+    stop_grace_period: 1m
+    restart: unless-stopped
+
+volumes:
+  odoo-db:
+  odoo-data:
