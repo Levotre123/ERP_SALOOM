@@ -18,7 +18,6 @@ services:
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /web/health
-    maxShutdownDelaySeconds: 120
     disk:
       name: odoo-filestore
       mountPath: /var/lib/odoo
